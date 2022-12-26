@@ -1,10 +1,13 @@
 .App {
-  text-align: center;
-  color: red;
+  color:black;
   background-color: #f8f8f8;
   min-height: 100vh;
 }
 
 a {
   text-decoration: none;
+}
+
+h1 {
+  text-align: center;
 }
