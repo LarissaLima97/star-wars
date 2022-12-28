@@ -1,0 +1,9 @@
+.starship-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.line {
+    opacity: 0.2;
+}
