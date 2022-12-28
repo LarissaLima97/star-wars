@@ -100,8 +100,7 @@ const convertHeight = (height) => {
 }
 
 const extractId = (url) => {
-  const id = url.replace("https://swapi.dev/api/starships/", "").replace("/", "")
-  return id 
+  return url.replace("https://swapi.dev/api/starships/", "").replace("/", "")
 }
 
 
