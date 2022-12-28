@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CardItem = ({ to, children }) => (
   <Link to={to}>
-    <Card style={{ margin: 16 }}>
+    <Card style={{ margin: 16, fontWeight:"bold", textAlign:"center"}}>
       <CardContent>{children}</CardContent>
     </Card>
   </Link>
