@@ -1,7 +1,11 @@
 import axios from "axios";
 
-export const getPeopleList = (page) => {
-  return axios.get(
-    `${process.env.REACT_APP_API_BASE_URL}/people/?page=${page}`
-  );
+const BASE_URL = "https://swapi.dev/api"
+
+export const getPeopleList = async (page) => {
+  const res = await(
+     axios.get(
+    `${BASE_URL}/people/?page=${page}`
+  ));
+  return res.data
 };
