@@ -1,10 +1,10 @@
-import CardItem from "../components/CardItem";
+import CardItem from "../../components/CardItem";
 import { Grid } from "@mui/material";
 import "./Person.css"
-import { getPerson, getStarShip} from "../services/api";
+import { getPerson, getStarShip} from "../../services/api";
 import { useState, useEffect } from "react";
-import { extractIdFromAPI, extractIdFromPath, convertHeightPerson } from "../services/utils";
-import HomeButton from "../components/HomeButton";
+import { extractIdFromAPI, extractIdFromPath, convertHeightPerson } from "../../services/utils";
+import HomeButton from "../../components/HomeButton";
 
 const Person = (args) => {
   const[character, setCharacter] = useState({});
@@ -47,7 +47,7 @@ const Person = (args) => {
     },[character]);
 
   return (
-    <div>
+    <div className="person">
       <HomeButton></HomeButton>
       <h1>{character.name}</h1>
       <section className="character-info">

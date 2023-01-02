@@ -1,8 +1,10 @@
 .button-previous{
     float: left;
     margin-left: 30px;
+    margin-top: 50px;
 }
 .button-next {
     float: right;
     margin-right: 30px;
+    margin-top: 50px;
 }

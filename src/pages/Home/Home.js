@@ -1,11 +1,11 @@
-import { getPeopleList } from "../services/api";
-import ButtonStep from "../components/ButtonStep";
+import { getPeopleList } from "../../services/api";
+import ButtonStep from "../../components/ButtonStep";
 import Grid from '@mui/material/Grid';
-import CardItem from "../components/CardItem";
+import CardItem from "../../components/CardItem";
 import { useState, useEffect } from "react";
 import "./Home.css";
-import { extractIdFromAPI, extractPageNumber } from "../services/utils";
-import HomeButton from "../components/HomeButton";
+import { extractIdFromAPI, extractPageNumber } from "../../services/utils";
+import HomeButton from "../../components/HomeButton";
 
 const Home = () => {
     const [peopleList, setPeopleList] = useState([]);
@@ -53,7 +53,7 @@ const Home = () => {
         <h1>Personagens Star Wars</h1>
         <Grid container spacing={2} >
           {peopleList.map(character =>(
-            <Grid item xs={2} key={extractIdFromAPI(character.url,"people/")}>
+            <Grid item xs={12} lg={2} md={12} sm={12}  key={extractIdFromAPI(character.url,"people/")}>
               <CardItem to={`personagem/${extractIdFromAPI(character.url,"people/")}`}>{character.name}</CardItem>
             </Grid>
           ))}

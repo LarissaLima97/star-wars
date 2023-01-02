@@ -6,8 +6,8 @@ const HomeButton = () => {
     return (
       <div>
      <Link to={"/"}>
-        <Button variant="text" style={{margin: 5}}>
-            <HomeIcon color='primary'></HomeIcon>
+        <Button variant="text" style={{margin: 5, }}>
+            <HomeIcon style={{ color: "#B1B7C3"}} ></HomeIcon>
         </Button>
      </Link>
       </div>

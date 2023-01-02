@@ -1,10 +1,10 @@
-import CardItem from "../components/CardItem"
+import CardItem from "../../components/CardItem"
 import { Grid } from "@mui/material"
-import { getPerson, getStarShip} from "../services/api";
+import { getPerson, getStarShip} from "../../services/api";
 import "./Starship.css"
 import { useState, useEffect } from "react";
-import { extractIdFromAPI, extractIdFromPath, convertHeightStarShip } from "../services/utils";
-import HomeButton from "../components/HomeButton";
+import { extractIdFromAPI, extractIdFromPath, convertHeightStarShip } from "../../services/utils";
+import HomeButton from "../../components/HomeButton";
 
 const Startship = (args) => {
   const[starShip, setStarShip] = useState({});

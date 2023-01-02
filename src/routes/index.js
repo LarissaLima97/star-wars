@@ -1,7 +1,7 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import Person from "../pages/Person";
-import Startship from "../pages/Startship";
+import Home from "../pages/Home/Home.js";
+import Person from "../pages/Person/Person.js";
+import Startship from "../pages/Starship/Startship.js";
 
 const Router = () => {
   return (
