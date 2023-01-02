@@ -28,8 +28,8 @@ const Person = (args) => {
   let starShipIds = [];
 
   const getPersonInfos = async (id) =>{
-    const res = await getPerson(id);
-    setCharacter(res);
+    const response = await getPerson(id);
+    setCharacter(response);
   };
 
   const populateStarshipIds = () => {
@@ -43,7 +43,7 @@ const Person = (args) => {
   const getStarShipInfo = async (id) => {
     const response = await getStarShip(id);
     return response;
-  }
+  };
 
   const populateStarShipList = async () => {
     for (let i=0; i < starShipIds.length; i++){
