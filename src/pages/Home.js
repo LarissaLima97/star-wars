@@ -3,18 +3,9 @@ import ButtonStep from "../components/ButtonStep";
 import Grid from '@mui/material/Grid';
 import CardItem from "../components/CardItem";
 import { useState, useEffect } from "react";
-import "./Home.css"
-
-const extractId = (url) => {
-  return url.replace("https://swapi.dev/api/people/", "").replace("/", "");
-}
-
-const extractPageNumber = (url) => {
-    if(url === null || url === undefined){
-        return null
-    }
-    return url.replace("https://swapi.dev/api/people/?page=", "")
-}
+import "./Home.css";
+import { extractIdFromAPI, extractPageNumber } from "../services/utils";
+import HomeButton from "../components/HomeButton";
 
 const Home = () => {
     const [peopleList, setPeopleList] = useState([]);
@@ -56,11 +47,14 @@ const Home = () => {
 
   return (
     <div> 
+      <div className="home-button">
+        <HomeButton></HomeButton>
+      </div>
         <h1>Personagens Star Wars</h1>
         <Grid container spacing={2} >
           {peopleList.map(character =>(
-            <Grid item key={extractId(character.url)}>
-              <CardItem to={`personagem/${extractId(character.url)}`}>{character.name}</CardItem>
+            <Grid item xs={2} key={extractIdFromAPI(character.url,"people/")}>
+              <CardItem to={`personagem/${extractIdFromAPI(character.url,"people/")}`}>{character.name}</CardItem>
             </Grid>
           ))}
         </Grid>

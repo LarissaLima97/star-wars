@@ -1,6 +1,6 @@
 import axios from "axios";
+import { BASE_URL } from "./utils";
 
-const BASE_URL = "https://swapi.dev/api"
 
 export const getPeopleList = async (page) => {
   const res = await(

@@ -3,23 +3,8 @@ import { Grid } from "@mui/material";
 import "./Person.css"
 import { getPerson, getStarShip} from "../services/api";
 import { useState, useEffect } from "react";
-
-
-const convertHeight = (height) => {
-  const partialHeight =  height/100;
-  const stringHeight = partialHeight.toString();
-  const splitedHeight = stringHeight.split(".");
-  
-  return `${splitedHeight[0]} metro(s) e ${splitedHeight[1]} centímetros`;
-}
-
-const extractId = (url) => {
-  return url.replace("https://swapi.dev/api/starships/", "").replace("/", "");
-};
-
-const extractIdFromPath = (url) => {
-  return url.replace("/personagem/","");
-};
+import { extractIdFromAPI, extractIdFromPath, convertHeightPerson } from "../services/utils";
+import HomeButton from "../components/HomeButton";
 
 const Person = (args) => {
   const[character, setCharacter] = useState({});
@@ -34,7 +19,7 @@ const Person = (args) => {
 
   const populateStarshipIds = () => {
     for (let i=0; i < character.starships?.length; i++){
-      let id = extractId(character.starships[i]);
+      let id = extractIdFromAPI(character.starships[i], "starships/");
       starShipIds.push(id);
     }
     populateStarShipList();
@@ -54,7 +39,7 @@ const Person = (args) => {
   };
     
     useEffect(()=>{
-      getPersonInfos(extractIdFromPath(args.location.pathname));
+      getPersonInfos(extractIdFromPath(args.location.pathname, "/personagem/"));
     },[args.location.pathname]);
 
     useEffect(()=>{
@@ -63,11 +48,12 @@ const Person = (args) => {
 
   return (
     <div>
+      <HomeButton></HomeButton>
       <h1>{character.name}</h1>
       <section className="character-info">
-        <p><b>Data de nascimento:</b>{character.birth_year}</p>
-        <p><b>Altura:</b> {convertHeight(character.height)} </p>
-        <p><b>Aparece em:</b> {character.films?.length} filmes </p>
+        <p><b>Data de nascimento: </b>{character.birth_year}</p>
+        <p><b>Altura: </b>{convertHeightPerson(character.height)} </p>
+        <p><b>Aparece em: </b>{character.films?.length} filmes </p>
       </section>
       <div className="line">
         <hr></hr>
@@ -76,8 +62,8 @@ const Person = (args) => {
         <h2>Naves</h2>
         <Grid container spacing={2} >
             {starShipList.map(starship =>(
-              <Grid item  xs={12} key={extractId(starship.url)}>
-                <CardItem to={`/nave/${extractId(starship.url)}`} >{starship.name}</CardItem>
+              <Grid item  xs={12} key={extractIdFromAPI(starship.url,"starships/")}>
+                <CardItem to={`/nave/${extractIdFromAPI(starship.url,"starships/")}`} >{starship.name}</CardItem>
               </Grid>
             ))}
           </Grid>
