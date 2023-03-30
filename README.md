@@ -1,3 +1,95 @@
+# Star Wars :stars:
+
+<!---Esses são exemplos. Veja [https://shields.io](https://shields.io/) para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
+
+![GitHub language count](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+![GitHub language count](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![GitHub language count](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![GitHub language count](https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
+![GitHub language count](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+<!---
+
+[https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+
+- -->
+
+> 
+> 
+
+## 💻 Objetivo
+
+Criar aplicação que exiba dados de personagens do Star Wars, consumindo a <a href="https://swapi.dev/documentation" target="_blank">SWAPI(API do star wars)</a>
+
+## Instalando - Star Wars :star2:
+
+Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
+
+1. Primeiro abra o Terminal de sua máquina
+2. Altere o diretório de trabalho atual para o local em que deseja ter o diretório clonado.
+3. Digite `git clone` (clonar git) e cole a URL que você copiou anteriormente.
+
+```
+git clone <https://github.com/YOUR-USERNAME/star-wars.git>
+
+```
+
+4. Pressione *Enter* para criar seu clone local.
+
+```
+Pronto, você já tem o repositório na sua máquina.
+
+```
+
+## 🚀 Como rodar a aplicação
+
+1. Primeiro abra o projeto em seu editor de código.
+2. No terminal, digite o comando abaixo para instalar as dependências. 
+
+```
+npm install
+
+```
+
+3. Após as dependências serem instaladas, digite o comando abaixo para rodar a aplicação localmente. 
+
+```
+npm start
+
+```
+
+4. Abra [http://localhost:3000](http://localhost:3000) para vizualizar no browser.
+
+```
+Pronto, aplicação já está rodando!
+
+```
+
+
+
+<!--## :link: Link para a página - Calculadora ➗
+
+- Link
+[https://larissalima97.github.io/calculadora/calculadora.html](https://larissalima97.github.io/calculadora/calculadora.html) -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +160,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-->
